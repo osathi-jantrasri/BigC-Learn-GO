@@ -1,0 +1,11 @@
+recipe-name:
+  echo 'This is a recipe!'
+
+# this is a comment
+another-recipe:
+  @echo 'This is another recipe.'
+
+# run development server
+dev:
+  go run .
+  

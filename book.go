@@ -27,7 +27,10 @@ func getBook(c *fiber.Ctx) error {
 	}
 	for _, book := range books{
 		if book.ID == id {
-			return c.JSON(book)
+			return c.JSON(map[string]interface{}{
+				"book": book,
+				"message": "Book found",
+			})
 		}
 	}
 	return c.SendStatus(fiber.StatusNotFound)
